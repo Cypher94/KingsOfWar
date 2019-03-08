@@ -1,0 +1,12 @@
+﻿body {
+    background-color: #d2c09e;
+    background-image: url('../assets/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Amaranth', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}

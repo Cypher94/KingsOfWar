@@ -20,4 +20,3 @@ Scenario: Navigation is displayed
 Scenario: Navigation redirect
 	When I press Navigation button
 	Then I should be redirected to other page
-

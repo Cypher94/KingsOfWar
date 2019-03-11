@@ -6,7 +6,9 @@
 
 <body>
     <nav data-attr-test="navigation" class="navigation">
-        <img data-attr-test="navigation-logo" src="~/Content/assets/logo.png" class="navigation-logo" />
+        <div class="navigation-logoContainer">
+            <img data-attr-test="navigation-logo" src="~/Content/assets/logo.png" class="navigation-logo" />
+        </div>
         <div class="navigation-pagesPanel">
             <a data-attr-test="navigation-homeBtt" class="navigation-pagesPanel-item" asp-controller="Home" asp-action="Index">Home</a>
             <a data-attr-test="navigation-loreBtt" class="navigation-pagesPanel-item" asp-controller="Lore" asp-action="Index">Lore</a>
@@ -14,6 +16,5 @@
             <a data-attr-test="navigation-campaignBtt" class="navigation-pagesPanel-item" asp-controller="Campaign" asp-action="Index">Campaign</a>
             <a data-attr-test="navigation-armyBuilderBtt" class="navigation-pagesPanel-item" asp-controller="ArmyBuilder" asp-action="Index">Army Builder</a>
         </div>
-
     </nav>
 </body>

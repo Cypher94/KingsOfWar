@@ -1,0 +1,31 @@
+﻿.footer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 40px;
+    background-image: url('../assets/bg-texture.jpg');
+    font-family: 'MedievalSharp', Arial, sans-serif;
+    flex-shrink: 0;
+    box-shadow: 0 -5px 8px -5px rgba(0, 0, 0, 0.8);
+}
+
+.footer-pagesPanel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-pagesPanel-item {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 40px;
+    line-height: 20px;
+}
+
+    .footer-pagesPanel-item:hover {
+        color: #603000;
+    }

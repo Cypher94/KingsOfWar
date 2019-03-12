@@ -7,13 +7,13 @@ namespace KingsOfWar.Spec.PageObjects
     {
         private readonly IWebDriver _visitorBrowser;
 
-        private readonly string _navigationBarSelector;
-        private readonly string _logoSelector;
-        private readonly string _homeBtnSelector;
-        private readonly string _loreBtnSelector;
-        private readonly string _rulesBtnSelector;
-        private readonly string _campaignBtnSelector;
-        private readonly string _armyBuilderBtnSelector;
+        private const string NavigationBarSelector = "[data-attr-test='navigation']";
+        private const string LogoSelector = "[data-attr-test='navigation-logo']";
+        private const string HomeBtnSelector = "[data-attr-test='navigation-homeBtn']";
+        private const string LoreBtnSelector = "[data-attr-test='navigation-loreBtn']";
+        private const string RulesBtnSelector = "[data-attr-test='navigation-rulesBtn']";
+        private const string CampaignBtnSelector = "[data-attr-test='navigation-campaignBtn']";
+        private const string ArmyBuilderBtnSelector = "[data-attr-test='navigation-armyBuilderBtn']";
 
         public IWebElement NavigationBarElement { get; set; }
         public IWebElement LogoElement { get; set; }
@@ -26,24 +26,17 @@ namespace KingsOfWar.Spec.PageObjects
         public Navigation(IWebDriver visitorBrowser)
         {
             _visitorBrowser = visitorBrowser;
-            _navigationBarSelector = "[data-attr-test='navigation']";
-            _logoSelector = "[data-attr-test='navigation-logo']";
-            _homeBtnSelector = "[data-attr-test='navigation-homeBtn']";
-            _loreBtnSelector = "[data-attr-test='navigation-loreBtn']";
-            _rulesBtnSelector = "[data-attr-test='navigation-rulesBtn']";
-            _campaignBtnSelector = "[data-attr-test='navigation-campaignBtn']";
-            _armyBuilderBtnSelector = "[data-attr-test='navigation-armyBuilderBtn']";
         }
 
         public void FindNavigationElements()
         {
-            NavigationBarElement = _visitorBrowser.FindElement(By.CssSelector(_navigationBarSelector));
-            LogoElement = _visitorBrowser.FindElement(By.CssSelector(_logoSelector));
-            HomeBtnElement = _visitorBrowser.FindElement(By.CssSelector(_homeBtnSelector));
-            LoreBtnElement = _visitorBrowser.FindElement(By.CssSelector(_loreBtnSelector));
-            RulesBtnElement = _visitorBrowser.FindElement(By.CssSelector(_rulesBtnSelector));
-            CampaignBtnElement = _visitorBrowser.FindElement(By.CssSelector(_campaignBtnSelector));
-            ArmyBuilderBtnElement = _visitorBrowser.FindElement(By.CssSelector(_armyBuilderBtnSelector));
+            NavigationBarElement = _visitorBrowser.FindElement(By.CssSelector(NavigationBarSelector));
+            LogoElement = _visitorBrowser.FindElement(By.CssSelector(LogoSelector));
+            HomeBtnElement = _visitorBrowser.FindElement(By.CssSelector(HomeBtnSelector));
+            LoreBtnElement = _visitorBrowser.FindElement(By.CssSelector(LoreBtnSelector));
+            RulesBtnElement = _visitorBrowser.FindElement(By.CssSelector(RulesBtnSelector));
+            CampaignBtnElement = _visitorBrowser.FindElement(By.CssSelector(CampaignBtnSelector));
+            ArmyBuilderBtnElement = _visitorBrowser.FindElement(By.CssSelector(ArmyBuilderBtnSelector));
         }
 
         public void CheckIfNavigationElementsExist()

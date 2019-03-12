@@ -7,11 +7,11 @@ namespace KingsOfWar.Spec.PageObjects
     {
         private readonly IWebDriver _visitorBrowser;
 
-        private readonly string _footerBarSelector;
-        private readonly string _forumBtnSelector;
-        private readonly string _helpBtnSelector;
-        private readonly string _supportBtnSelector;
-        private readonly string _facebookBtnSelector;
+        private const string FooterBarSelector = "[data-attr-test='footer']";
+        private const string ForumBtnSelector = "[data-attr-test='footer-forumBtn']";
+        private const string HelpBtnSelector = "[data-attr-test='footer-helpBtn']";
+        private const string SupportBtnSelector = "[data-attr-test='footer-supportBtn']";
+        private const string FacebookBtnSelector = "[data-attr-test='footer-facebookBtn']";
 
         public IWebElement FooterBarElement { get; set; }
         public IWebElement ForumBtnElement { get; set; }
@@ -22,20 +22,15 @@ namespace KingsOfWar.Spec.PageObjects
         public Footer(IWebDriver visitorBrowser)
         {
             _visitorBrowser = visitorBrowser;
-            _footerBarSelector = "[data-attr-test='footer']";
-            _forumBtnSelector = "[data-attr-test='footer-forumBtn']";
-            _helpBtnSelector = "[data-attr-test='footer-helpBtn']";
-            _supportBtnSelector = "[data-attr-test='footer-supportBtn']";
-            _facebookBtnSelector = "[data-attr-test='footer-facebookBtn']";
         }
 
         public void FindFooterElements()
         {
-            FooterBarElement = _visitorBrowser.FindElement(By.CssSelector(_footerBarSelector));
-            ForumBtnElement = _visitorBrowser.FindElement(By.CssSelector(_forumBtnSelector));
-            HelpBtnElement = _visitorBrowser.FindElement(By.CssSelector(_helpBtnSelector));
-            SupportBtnElement = _visitorBrowser.FindElement(By.CssSelector(_supportBtnSelector));
-            FacebookBtnElement = _visitorBrowser.FindElement(By.CssSelector(_facebookBtnSelector));
+            FooterBarElement = _visitorBrowser.FindElement(By.CssSelector(FooterBarSelector));
+            ForumBtnElement = _visitorBrowser.FindElement(By.CssSelector(ForumBtnSelector));
+            HelpBtnElement = _visitorBrowser.FindElement(By.CssSelector(HelpBtnSelector));
+            SupportBtnElement = _visitorBrowser.FindElement(By.CssSelector(SupportBtnSelector));
+            FacebookBtnElement = _visitorBrowser.FindElement(By.CssSelector(FacebookBtnSelector));
         }
 
         public void CheckIfFooterElementsExist()

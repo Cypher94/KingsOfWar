@@ -8,13 +8,13 @@
 
 <body>
     <section class="contentContainer">
-        <div class="home-contentContainer">
+        <div data-attr-test="homePage-aboutSection" class="home-contentContainer">
             <h1 class="home-contentContainer-header">IT'S TIME FOR WAR</h1>
             <p class="home-contentContainer-text">Kings of War is the game of mass combat between mighty armies in a fantasy world torn apart by epic conflict and legendary battles. Its fast-paced, competitive rules make the game ideal for massed battles between hundreds of troops - and with Mantic's range, it's possible to do just that without breaking the bank!</p>
             <img class="home-contentContainer-image " src="~/Content/assets/KoW-info.jpg" />
         </div>
 
-        <div class="home-contentContainer">
+        <div data-attr-test="homePage-gameInfoSection" class="home-contentContainer">
             <h2 class="home-contentContainer-header">So what makes Kings of War special?</h2>
             <p class="home-contentContainer-text">
                 The rule system is clearly written, simple and innovative. Kings of War is about being accessible – anyone can play. And play you will, the game is fast and you can have multiple battles in an evening. The game is simple, so that don’t have to keep looking rules up.
@@ -35,13 +35,16 @@
             </p>
         </div>
 
-        <div class="home-contentContainer">
+        <div data-attr-test="homePage-articlesSection" class="home-contentContainer">
             <h2 class="home-contentContainer-header">News</h2>
             @foreach (var news in Model)
             {
                 <div class="home-contentContainer-article">
-                    <h4 class="home-contentContainer-articleTitle">@news.Title</h4>
-                    <p class="home-contentContainer-text ">@news.ShortDescription<a class="home-contentContainer-articleReadMore" asp-controller="Home" asp-action="ArticleDetails" asp-route-id="@news.Id"> Read More</a></p>
+                    <h4 data-attr-test="homePage-articlesSection-articleTitle" class="home-contentContainer-articleTitle">@news.Title</h4>
+                    <p data-attr-test="homePage-articlesSection-articleDescription" class="home-contentContainer-text ">
+                        @news.ShortDescription
+                        <a data-attr-test="homePage-articlesSection-articleReadMore" class="home-contentContainer-articleReadMore" asp-controller="Home" asp-action="ArticleDetails" asp-route-id="@news.Id"> Read More</a>
+                    </p>
                 </div>
             }
         </div>

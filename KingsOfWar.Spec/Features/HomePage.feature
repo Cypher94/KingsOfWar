@@ -8,8 +8,9 @@ Background:
 
 Scenario: Home Page is displayed correctly
 	Then I should see following elements displayed
-	| element           |
-	| Navigation        |
+	| element			|
+	| Navigation		|
+	| About section		|
 	| Game info section |
 	| Articles Section  |
 	| Footer            |

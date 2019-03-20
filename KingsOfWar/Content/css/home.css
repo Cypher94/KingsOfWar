@@ -1,0 +1,39 @@
+﻿.home-contentContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.home-contentContainer-header {
+    font-family: 'MedievalSharp', Arial, sans-serif;
+}
+
+.home-contentContainer-text {
+    text-align: justify;
+    color: #603000;
+}
+
+.home-contentContainer-image {
+    height: 40%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.home-contentContainer-article {
+    margin-top: 10px;
+}
+
+.home-contentContainer-articleTitle {
+    font-family: 'MedievalSharp', Arial, sans-serif;
+}
+
+.home-contentContainer-articleReadMore {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+    .home-contentContainer-articleReadMore:hover {
+        color: #603000;
+    }

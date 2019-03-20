@@ -1,12 +1,13 @@
 ﻿.footer {
     width: 100%;
-    position: relative;
+    position: fixed;
     display: flex;
     height: 40px;
     background-image: url('../assets/bg-texture.jpg');
     font-family: 'MedievalSharp', Arial, sans-serif;
     flex-shrink: 0;
     box-shadow: 0 -5px 8px -5px rgba(0, 0, 0, 0.8);
+    bottom: 0px;
 }
 
 .footer-pagesPanel {
@@ -29,3 +30,9 @@
     .footer-pagesPanel-item:hover {
         color: #603000;
     }
+
+@media screen and (max-width: 600px) {
+    .footer-pagesPanel-item {
+        margin: 0 20px;
+    }
+}

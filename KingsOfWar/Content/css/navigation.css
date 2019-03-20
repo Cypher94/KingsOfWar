@@ -1,6 +1,6 @@
 ﻿.navigation {
     width: 100%;
-    position: relative;
+    position: fixed;
     display: flex;
     height: 85px;
     font-family: 'MedievalSharp', Arial, sans-serif;
@@ -52,3 +52,17 @@
     .navigation-pagesPanel-item:hover {
         color: #603000;
     }
+
+
+@media screen and (max-width: 1100px) {
+    .navigation-pagesPanel {
+        width: 81%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .navigation-pagesPanel {
+        width: 100%;
+    }
+}

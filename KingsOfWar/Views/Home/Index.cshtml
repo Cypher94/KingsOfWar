@@ -1,13 +1,49 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-}
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<KingsOfWar.Models.News>
 
-@Html.Partial("~/Views/Shared/_AssetsLink.cshtml")
-@Html.Partial("~/Views/Shared/_Navigation.cshtml")
+<head>
+    <link href="~/Content/css/home.css" rel="stylesheet" />
+    <title>Home</title>
+</head>
 
-<section class="content">
-    <h2>Home</h2>
-</section>
+<body>
+    <section class="contentContainer">
+        <div class="home-contentContainer">
+            <h1 class="home-contentContainer-header">IT'S TIME FOR WAR</h1>
+            <p class="home-contentContainer-text">Kings of War is the game of mass combat between mighty armies in a fantasy world torn apart by epic conflict and legendary battles. Its fast-paced, competitive rules make the game ideal for massed battles between hundreds of troops - and with Mantic's range, it's possible to do just that without breaking the bank!</p>
+            <img class="home-contentContainer-image " src="~/Content/assets/KoW-info.jpg" />
+        </div>
 
-@Html.Partial("~/Views/Shared/_Footer.cshtml")
+        <div class="home-contentContainer">
+            <h2 class="home-contentContainer-header">So what makes Kings of War special?</h2>
+            <p class="home-contentContainer-text">
+                The rule system is clearly written, simple and innovative. Kings of War is about being accessible – anyone can play. And play you will, the game is fast and you can have multiple battles in an evening. The game is simple, so that don’t have to keep looking rules up.
+                The game is brutal fun – big armies will clash on the tabletop.
+                <br /><br />
+
+                It's all about playing games. All you need to play Kings of War is the rulebook and an army. There are no army books, all eleven army lists are included in the Kings of War rulebook.
+                That’s not to say there isn’t more on the way – there are in fact two supplementary books coming with lists for historical armies and for fantasy armies that we don’t make miniatures for, like medieval human armies, and lizard-, beast- or rat- men forces.
+                <br /><br />
+
+                It's a fantasy battle game written for both the Casual and Competitive Player. Easy to learn, deep rules set allows for players to focus more on tactics and strategy of how best to use their units to defeat their opponent!
+                There are also fewer dice rolls for results in game. Every model/unit has stats for damaging an enemy and stats for defence against their enemies. Most actions in Kings of War take two separate rolls, first is to hit, and second is to damage the enemy. Once damage rolls are successful damage is recorded on the unit!
+                <br /><br />
+
+                Balanced Armies Are Tournament Friendly
+                After hundreds of games, beta-tests and competitive tournaments all around the world, we’ve worked with fans and gamers to collect feedback and finely tune all eleven army lists included in the Kings of War 2nd Edition Rulebook, to make casual play fun, and tournaments fair and balanced.
+                And all you need is the one book.
+            </p>
+        </div>
+
+        <div class="home-contentContainer">
+            <h2 class="home-contentContainer-header">News</h2>
+            @foreach (var news in Model)
+            {
+                <div class="home-contentContainer-article">
+                    <h4 class="home-contentContainer-articleTitle">@news.Title</h4>
+                    <p class="home-contentContainer-text ">@news.ShortDescription<a class="home-contentContainer-articleReadMore" asp-controller="Home" asp-action="ArticleDetails" asp-route-id="@news.Id"> Read More</a></p>
+                </div>
+            }
+        </div>
+    </section>
+</body>
